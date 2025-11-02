@@ -20,7 +20,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
-        h1, h2 {
+        h1, h2, h3 {
             color: #333;
             border-bottom: 2px solid #eee;
             padding-bottom: 10px;
@@ -32,14 +32,17 @@
         h2 {
             margin-top: 30px;
         }
+        h3 {
+            margin-top: 25px;
+            color: #444;
+            border-bottom: none;
+        }
         p, li {
             color: #555;
             font-size: 16px;
         }
-        
-        /* --- 여기를 수정했습니다 --- */
         img.screenshot {
-            max-width: 40%; /* 100%에서 40%로 수정됨 */
+            max-width: 40%; /* Controls the display size */
             height: auto;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -48,12 +51,10 @@
             margin-left: auto;
             margin-right: auto;
         }
-        /* --- 여기까지 --- */
-
         .step {
             margin-bottom: 20px;
         }
-        ol {
+        ol, ul {
             padding-left: 20px;
         }
         li {
@@ -66,6 +67,17 @@
             margin-top: -10px;
             margin-bottom: 20px;
         }
+        /* Style for the tip box */
+        .tip {
+            background-color: #fdfdea;
+            border: 1px solid #f9e69f;
+            border-radius: 8px;
+            padding: 1px 20px 10px 20px;
+            margin-top: 25px;
+        }
+        .tip h3 {
+            color: #6d643d;
+        }
     </style>
 </head>
 <body>
@@ -75,65 +87,78 @@
 
         <p>This manual provides basic instructions for using the PCOS QR Report Viewer application. This app allows you to scan QR codes containing election results, decrypt the data, and view detailed reports.</p>
 
-        <h2>1. Main Screen and QR Code Scan</h2>
+        <!-- 1. Launch App -->
+        <h2>1. Launch the App</h2>
         <div class="step">
-            <p>When you launch the app, the main screen appears. You can start scanning QR codes from here.</p>
-            <ol>
-                <li>Tap the <strong>'Scan QR Code'</strong> button in the center of the screen.</li>
-                <li>When the camera activates, align the report's QR code in the center of the screen to scan it.</li>
-                <li>The app will automatically start processing the data upon recognizing the QR code. (A loading screen (Figure 2) may be displayed if necessary.)</li>
-            </ol>
-            <img src="pcosqr2-0007.png" alt="Main Screen" class="screenshot">
-            <p class="caption">Figure 1: Main Screen</p>
-            <img src="pcosqr2-0008.png" alt="Loading Screen" class="screenshot">
-            <p class="caption">Figure 2: Loading screen during data processing</p>
+            <p>Tap the 'PcosQrGOV' app icon on your home screen to run it.</p>
+            <img src="pcosqr2-0006.png" alt="Launch App Screen" class="screenshot">
+            <p class="caption">Figure 1: App Icon</p>
         </div>
 
-        <h2>2. Review Scan Result Summary</h2>
+        <!-- 2. Prepare QR Codes -->
+        <h2>2. Prepare QR Codes</h2>
         <div class="step">
-            <p>Once the QR code scanning and decryption are complete, you will be taken to the scan result summary screen. This screen displays basic information from the scanned QR codes.</p>
-            <ul>
-                <li><strong>Opening QR:</strong> Opening QR information</li>
-                <li><strong>Closing QR:</strong> Closing QR information</li>
-                <li><strong>Governorate:</strong> Governorate-level QR information</li>
-                <li><strong>Party:</strong> Party-level QR information</li>
-                <li><strong>Candidate:</strong> Candidate-level QR information</li>
-            </ul>
-            <p>To view the detailed report, tap the <strong>'View Report'</strong> button at the bottom.</p>
-            <img src="pcosqr2-0009.png" alt="Scan Result Summary" class="screenshot">
-            <p class="caption">Figure 3: Scan Result Summary Screen</p>
+            <p>Get the election results report with the printed QR codes. One report sheet contains multiple QR codes.</p>
+            <!-- 이미지가 추가되었습니다 -->
+            <img src="QR.png" alt="QR Codes on Report" class="screenshot">
+            <p class="caption">Figure 2: Example of QR codes on a report</p>
         </div>
 
-        <h2>3. View Detailed Report</h2>
+        <!-- 3. Start Scanning -->
+        <h2>3. Start Scanning</h2>
         <div class="step">
-            <p>Tapping the 'View Report' button navigates to the detailed report screen. The report is organized into several tabs.</p>
+            <p>Align the first QR code inside the viewfinder (square border) on the camera screen.</p>
             
-            <h3>Info Tab</h3>
-            <p>Displays basic information about the report (e.g., Station ID, time, etc.). You can export or share the current report as a PDF file using the <strong>'Share PDF'</strong> button at the bottom of the screen.</p>
-            <img src="pcosqr2-0010.png" alt="Report - Info Tab" class="screenshot">
-            <p class="caption">Figure 4: Detailed Report - Info Tab</p>
+            <h3>3-1. Tap Scan Button</h3>
+            <p>Tap the 'Scan QR Code' button in the center of the main screen.</p>
+            <img src="pcosqr2-0007.png" alt="Main Screen" class="screenshot">
+            <!-- 그림 번호가 수정되었습니다 -->
+            <p class="caption">Figure 3: Main Screen</p>
 
-            <h3>Governorate Tab</h3>
-            <p>Selecting the 'Governorate' tab allows you to check the aggregated results at the governorate level.</p>
-            <img src="pcosqr2-0013.png" alt="Report - Governorate Tab" class="screenshot">
-            <p class="caption">Figure 5: Detailed Report - Governorate Tab</p>
-
-            <h3>Party Tab</h3>
-            <p>Selecting the 'Party' tab allows you to check the vote results by party.</p>
-            <img src="pcosqr2-0012.png" alt="Report - Party Tab" class="screenshot">
-            <p class="caption">Figure 6: Detailed Report - Party Tab</p>
-
-            <h3>Candidate Tab</h3>
-            <p>Selecting the 'Candidate' tab allows you to check the detailed vote results by candidate.</p>
-            <img src="pcosqr2-0011.png" alt="Report - Candidate Tab" class="screenshot">
-            <p class="caption">Figure 7: Detailed Report - Candidate Tab</p>
+            <h3>3-2. Scan and Process</h3>
+            <p>When the camera activates, center the report's QR code to scan it. When recognized, a "Processing QR Code..." message will briefly appear.</p>
+            <img src="pcosqr2-0008.png" alt="Scanning / Processing" class="screenshot">
+            <!-- 그림 번호가 수정되었습니다 -->
+            <p class="caption">Figure 4: Processing a QR Code</p>
         </div>
 
-        <h2>4. Share Report (PDF)</h2>
+        <!-- Tip Section -->
+        <div class="tip">
+            <h3>[Scanning Tip] Real-time Feedback</h3>
+            <p>The app provides feedback on the scan status via the viewfinder color and bottom text.</p>
+            <ul>
+                <li><strong>Orange:</strong> Check QR code position.</li>
+                <li><strong>Yellow:</strong> Duplicate QR code (already scanned).</li>
+                <li><strong>Lime:</strong> Scan successful.</li>
+            </ul>
+        </div>
+
         <div class="step">
-            <p>From the detailed report screen (Figure 4), tapping the <strong>'Share PDF'</strong> button will bring up the system's share menu, allowing you to share the generated PDF report via other apps (email, messenger, etc.) or save it to your device.</p>
+            <h3>3-4. Check Scan Progress</h3>
+            <p>After each successful scan, you will be taken to the 'Scan Result Summary' screen. This screen shows how many QR codes have been scanned out of the total.</p>
+            <img src="pcosqr2-0009.png" alt="Scan Result Summary" class="screenshot">
+            <!-- 그림 번호가 수정되었습니다 -->
+            <p class="caption">Figure 5: Scan Result Summary</p>
+        </div>
+
+        <!-- 4. Generate and View Final Report -->
+        <h2>4. Generate and View Final Report</h2>
+        <div class="step">
+            <h3>4-1. Report Generation</h3>
+            <p>After the last QR code is scanned, a "Generating final report..." message will briefly appear.</p>
+            <!-- User mapped pcosqr2-0012.png here -->
+            <img src="pcosqr2-0012.png" alt="Generating Report" class="screenshot">
+            <!-- 그림 번호가 수정되었습니다 -->
+            <p class="caption">Figure 6: Report Generation Step</p>
+
+            <h3>4-2. Report View</h3>
+            <p>Once complete, the unified election result report (in PDF format) will be automatically displayed on the screen.</p>
+            <!-- 이미지가 추가되었습니다 -->
+            <img src="pcosqr2-0005-1.png" alt="Final Report View" class="screenshot">
+            <p class="caption">Figure 7: Final Report View</p>
         </div>
 
     </div>
 </body>
 </html>
+
