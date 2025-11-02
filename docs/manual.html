@@ -1,1 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCOS QR Report Viewer - User Manual</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        h1, h2 {
+            color: #333;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        h1 {
+            text-align: center;
+            color: #005a9c;
+        }
+        h2 {
+            margin-top: 30px;
+        }
+        p, li {
+            color: #555;
+            font-size: 16px;
+        }
+        img.screenshot {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin: 20px 0;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .step {
+            margin-bottom: 20px;
+        }
+        ol {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .caption {
+            text-align: center;
+            font-style: italic;
+            color: #777;
+            margin-top: -10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PCOS QR Report Viewer</h1>
+        <h1>User Manual</h1>
 
+        <p>This manual provides basic instructions for using the PCOS QR Report Viewer application. This app allows you to scan QR codes containing election results, decrypt the data, and view detailed reports.</p>
+
+        <h2>1. Main Screen and QR Code Scan</h2>
+        <div class="step">
+            <p>When you launch the app, the main screen appears. You can start scanning QR codes from here.</p>
+            <ol>
+                <li>Tap the <strong>'Scan QR Code'</strong> button in the center of the screen.</li>
+                <li>When the camera activates, align the report's QR code in the center of the screen to scan it.</li>
+                <li>The app will automatically start processing the data upon recognizing the QR code. (A loading screen (Figure 2) may be displayed if necessary.)</li>
+            </ol>
+            <img src="pcosqr2-0007.jpg" alt="Main Screen" class="screenshot">
+            <p class="caption">Figure 1: Main Screen</p>
+            <img src="pcosqr2-0008.jpg" alt="Loading Screen" class="screenshot">
+            <p class="caption">Figure 2: Loading screen during data processing</p>
+        </div>
+
+        <h2>2. Review Scan Result Summary</h2>
+        <div class="step">
+            <p>Once the QR code scanning and decryption are complete, you will be taken to the scan result summary screen. This screen displays basic information from the scanned QR codes.</p>
+            <ul>
+                <li><strong>Opening QR:</strong> Opening QR information</li>
+                <li><strong>Closing QR:</strong> Closing QR information</li>
+                <li><strong>Governorate:</strong> Governorate-level QR information</li>
+                <li><strong>Party:</strong> Party-level QR information</li>
+                <li><strong>Candidate:</strong> Candidate-level QR information</li>
+            </ul>
+            <p>To view the detailed report, tap the <strong>'View Report'</strong> button at the bottom.</p>
+            <img src="pcosqr2-0009.jpg" alt="Scan Result Summary" class="screenshot">
+            <p class="caption">Figure 3: Scan Result Summary Screen</p>
+        </div>
+
+        <h2>3. View Detailed Report</h2>
+        <div class="step">
+            <p>Tapping the 'View Report' button navigates to the detailed report screen. The report is organized into several tabs.</p>
+            
+            <h3>Info Tab</h3>
+            <p>Displays basic information about the report (e.g., Station ID, time, etc.). You can export or share the current report as a PDF file using the <strong>'Share PDF'</strong> button at the bottom of the screen.</p>
+            <img src="pcosqr2-0010.jpg" alt="Report - Info Tab" class="screenshot">
+            <p class="caption">Figure 4: Detailed Report - Info Tab</p>
+
+            <h3>Governorate Tab</h3>
+            <p>Selecting the 'Governorate' tab allows you to check the aggregated results at the governorate level.</p>
+            <img src="pcosqr2-0013.jpg" alt="Report - Governorate Tab" class="screenshot">
+            <p class="caption">Figure 5: Detailed Report - Governorate Tab</p>
+
+            <h3>Party Tab</h3>
+            <p>Selecting the 'Party' tab allows you to check the vote results by party.</p>
+            <img src="pcosqr2-0012.jpg" alt="Report - Party Tab" class="screenshot">
+            <p class="caption">Figure 6: Detailed Report - Party Tab</p>
+
+            <h3>Candidate Tab</h3>
+            <p>Selecting the 'Candidate' tab allows you to check the detailed vote results by candidate.</p>
+            <img src="pcosqr2-0011.jpg" alt="Report - Candidate Tab" class="screenshot">
+            <p class="caption">Figure 7: Detailed Report - Candidate Tab</p>
+        </div>
+
+        <h2>4. Share Report (PDF)</h2>
+        <div class="step">
+            <p>From the detailed report screen (Figure 4), tapping the <strong>'Share PDF'</strong> button will bring up the system's share menu, allowing you to share the generated PDF report via other apps (email, messenger, etc.) or save it to your device.</p>
+        </div>
+
+    </div>
+</body>
+</html>
